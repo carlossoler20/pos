@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,22 +31,31 @@
   <script src="vistas/dist/js/adminlte.min.js"></script>
 
 </head>
+
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
+  <!-- Site wrapper -->
+  <div class="wrapper">
 
-  <!-- =============================================== -->
-
-
-  <?php
-include "modulos/cabezote.php";
-?>
-</div>
+    <!-- =============================================== -->
 
 
+    <?php
+    // Cabezote
+    include "modulos/cabezote.php";
+    // Menu
+    include "modulos/menu.php";
+    //Contenido
+    include "modulos/contenido.php";
+    //Footer
+    include "modulos/footer.php";
+    ?>
+  </div>
 
-<!-- ./wrapper -->
-<script src="vistas/js/plantilla.js"></script>
+
+
+  <!-- ./wrapper -->
+  <script src="vistas/js/plantilla.js"></script>
 
 </body>
+
 </html>
