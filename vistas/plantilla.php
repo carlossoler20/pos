@@ -18,6 +18,7 @@
   <!-- AdminLTE Skins.-->
   <link rel="stylesheet" href="vistas/dist/css/skins/_all-skins.min.css">
 
+  <link rel="fav-icon" href="/vistas/img/images.png">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
@@ -45,7 +46,25 @@
     // Menu
     include "modulos/menu.php";
     //Contenido
-    include "modulos/contenido.php";
+    if (isset($_GET["ruta"])) {
+      if($_GET["ruta"] == "inicio" ||
+      $_GET["ruta"] == "inicio" ||
+      $_GET["ruta"] == "usuarios" ||
+      $_GET["ruta"] == "categorias" ||
+      $_GET["ruta"] == "productos" ||
+      $_GET["ruta"] == "clientes" ||
+      $_GET["ruta"] == "ventas" ||
+      $_GET["ruta"] == "crear-venta" ||
+      $_GET["ruta"] == "reportes"
+      ){
+        include "modulos/".$_GET["ruta"].".php";
+      }else{
+        include "modulos/404.php";
+      }
+    } else {
+      include "modulos/inicio.php";
+    }
+
     //Footer
     include "modulos/footer.php";
     ?>
